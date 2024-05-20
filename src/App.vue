@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 import Toast from 'primevue/toast'
 </script>
 
 <template>
-  <header>
+  <!-- <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
@@ -14,6 +14,28 @@ import Toast from 'primevue/toast'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+      </nav>
+    </div>
+  </header> -->
+  <header>
+    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+
+    <div class="wrapper">
+      <nav>
+        <RouterLink to="/">Home</RouterLink><br /><br />
+
+        <RouterLink to="/multiple-ans">Multiplas Respostas</RouterLink><br />
+        <RouterLink to="/sequence">Ordenação</RouterLink><br />
+        <RouterLink to="/multiple-choice">Múltipla Escolha</RouterLink><br />
+        <RouterLink to="/matching">Associação</RouterLink><br />
+        <RouterLink to="/drag-n-drop">Arrastar e Soltar</RouterLink><br />
+        <RouterLink to="/fill-in-the-blanks">Preencher as Lacunas</RouterLink><br />
+        <RouterLink to="/simple-ans">Respostas Simples</RouterLink><br />
+        <RouterLink to="/select-from-list">Selecionar de uma Lista</RouterLink><br />
+        <RouterLink to="/ans-scale">Resposta em Escala</RouterLink><br />
+        <RouterLink to="/point-to-picture">Apontar em Imagem</RouterLink><br /><br />
+
+        <RouterLink to="/about">Sobre</RouterLink><br />
       </nav>
     </div>
   </header>

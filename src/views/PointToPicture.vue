@@ -1,16 +1,14 @@
-<script setup lang="ts">
-import HelloWorld from '../components/HelloWorld.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div class="about">
-    <HelloWorld />
+  <div class="point-to-picture">
+    <h1>Aqui teremos o funcionamento de apontar em imagem</h1>
   </div>
 </template>
 
 <style>
 @media (min-width: 1024px) {
-  .about {
+  .point-to-picture {
     min-height: 100vh;
     display: flex;
     align-items: center;
