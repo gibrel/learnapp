@@ -1,21 +1,25 @@
 <script setup lang="ts">
-import TableReorder from '../components/tableReorder/TableReorder.vue'
+import Splitter from 'primevue/splitter';
+import SplitterPanel from 'primevue/splitterpanel';
+import TableReorder from '../components/tableReorder/TableOrdering.vue'
+
 </script>
 
 <template>
   <div class="matching">
     <h1>Aqui teremos o funcionamento de associação</h1>
-    <TableReorder></TableReorder>
-    <TableReorder></TableReorder>
+    <br>
+    <div class="card">
+      <Splitter style="height: 300px" class="mb-5">
+        <SplitterPanel class="flex align-items-center justify-content-center">
+          <TableReorder class="flex max-width-10vh"></TableReorder>
+        </SplitterPanel>
+        <SplitterPanel class="flex align-items-center justify-content-center">
+          <TableReorder class="flex max-width-10vh"></TableReorder>
+        </SplitterPanel>
+      </Splitter>
+    </div>
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .matching {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<style></style>

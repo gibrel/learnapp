@@ -1,88 +1,117 @@
 <script setup lang="ts">
 import WelcomeItem from './WelcomeItem.vue'
-import DocumentationIcon from './icons/IconDocumentation.vue'
-import ToolingIcon from './icons/IconTooling.vue'
-import EcosystemIcon from './icons/IconEcosystem.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
-import SupportIcon from './icons/IconSupport.vue'
+import DragNDropIcon from './icons/IconDragNDrop.vue'
+import FillInTheBlanksIcon from './icons/IconFillInTheBlanks.vue'
+import MatchingIcon from './icons/IconMatching.vue'
+import MultipleAnsIcon from './icons/IconMultipleAns.vue'
+import MultipleChoiceIcon from './icons/IconMultipleChoice.vue'
+import PointToPictureIcon from './icons/IconPointToPicture.vue'
+import SelectFromListIcon from './icons/IconSelectFromList.vue'
+import SequenceIcon from './icons/IconSequence.vue'
+import SimpleAnsIcon from './icons/IconSimpleAns.vue'
+import AnsInScaleIcon from './icons/IconAnsInScale.vue'
 </script>
 
 <template>
+  <!-- Vue’s <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a> -->
+
   <WelcomeItem>
     <template #icon>
-      <DocumentationIcon />
+      <MultipleAnsIcon />
     </template>
-    <template #heading>Documentation</template>
+    <template #heading>Múltiplas Respostas</template>
 
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
+    No componente de <a href="/multiple-ans" rel="noopener">múltiplas respostas</a>, o usuário poderá selecionar mais de
+    uma resposta.
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
-      <ToolingIcon />
+      <SequenceIcon />
     </template>
-    <template #heading>Tooling</template>
+    <template #heading>Ordenação</template>
 
-    This project is served and bundled with
-    <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>. The
-    recommended IDE setup is
-    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a> +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a>. If
-    you need to test your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a> and
-    <a href="https://on.cypress.io/component" target="_blank" rel="noopener"
-      >Cypress Component Testing</a
-    >.
-
-    <br />
-
-    More instructions are available in <code>README.md</code>.
+    O componente de <a href="/sequence" rel="noopener">ordenação</a> requer que o usuário ordene os elementos em uma
+    única coluna atravéz de uma adequação lógica.
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
-      <EcosystemIcon />
+      <MultipleChoiceIcon />
     </template>
-    <template #heading>Ecosystem</template>
+    <template #heading>Múltipla Escolha</template>
 
-    Get official tools and libraries for your project:
-    <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-    <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a>, and
-    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Vue Dev Tools</a>. If
-    you need more resources, we suggest paying
-    <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
-    a visit.
+    No componente de <a href="/multiple-choice" rel="noopener">múltiplas respostas</a>, o usuário pode escolher apenas
+    um item entre múltiplas opções.
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
-      <CommunityIcon />
+      <MatchingIcon />
     </template>
-    <template #heading>Community</template>
+    <template #heading>Associação</template>
 
-    Got stuck? Ask your question on
-    <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our official
-    Discord server, or
-    <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener"
-      >StackOverflow</a
-    >. You should also subscribe to
-    <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a> and follow
-    the official
-    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-    twitter account for latest news in the Vue world.
+    No componente de <a href="/matching" rel="noopener">associação</a>requer que o usuário ordene os elementos de duas
+    colunas para que suas linhas sejam correlacionadas.
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
-      <SupportIcon />
+      <DragNDropIcon />
     </template>
-    <template #heading>Support Vue</template>
+    <template #heading>Arrastar e Soltar</template>
 
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
+    No componente de <a href="/drag-n-drop" rel="noopener">arrastar e soltar</a>, o usuário deve arrastar e soltar itens
+    da tela para selecionar algumas opções escolhidas de forma visual.
+  </WelcomeItem>
+
+  <WelcomeItem>
+    <template #icon>
+      <FillInTheBlanksIcon />
+    </template>
+    <template #heading>Preencher as Lacunas</template>
+
+    No componente de <a href="fill-in-the-blanks" rel="noopener">preencher as lacunas</a>, o usuário deve preencher as
+    lacunas com algumas opções disponíveis.
+  </WelcomeItem>
+
+  <WelcomeItem>
+    <template #icon>
+      <SimpleAnsIcon />
+    </template>
+    <template #heading>Respostas Simples</template>
+
+    No componente de <a href="/simple-ans" rel="noopener">respostas simples</a>, o usuário deve preencher um campo de
+    texto de forma livre.
+  </WelcomeItem>
+
+  <WelcomeItem>
+    <template #icon>
+      <SelectFromListIcon />
+    </template>
+    <template #heading>Selecionar de uma Lista</template>
+
+    No componente de <a href="/select-from-list" rel="noopener">seleção de uma lista</a>, o usuário seleciona uma
+    resposta a partir de uma lista de itens.
+  </WelcomeItem>
+
+  <WelcomeItem>
+    <template #icon>
+      <AnsInScaleIcon />
+    </template>
+    <template #heading>Resposta em Escala</template>
+
+    No componente de <a href="/ans-scale" rel="noopener">resposta por escala</a> requer que o usuário selecione a sua
+    resposta em uma escala configurável.
+  </WelcomeItem>
+
+  <WelcomeItem>
+    <template #icon>
+      <PointToPictureIcon />
+    </template>
+    <template #heading>Apontar em Imagem</template>
+
+    No componente de <a href="/point-to-picture" rel="noopener">apontar na imagem</a>, o usuário interagem com uma
+    imagem, indicando a posicção da imagem como uma resposta.
   </WelcomeItem>
 </template>
